@@ -1,0 +1,53 @@
+{
+  "name": "@amirhrb/swipe-detector",
+  "version": "1.0.0",
+  "description": "swipe-detector is a React library to detect Touch Swipes and Directions.",
+  "license": "Apache-2.0",
+  "private": false,
+  "author": "amirrabi70@gmail.com",
+  "keywords": [
+    "scrollbar",
+    "react",
+    "next",
+    "custom scrollbar",
+    "overflow"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/swipe-detector"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amirhrb/swipe-detector.git"
+  },
+  "bugs": {
+    "url": "https://github.com/amirhrb/swipe-detector/issues"
+  },
+  "homepage": "https://github.com/amirhrb/swipe-detector#readme",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "rollup": "rollup -c"
+  },
+  "peerDependencies": {
+    "react": "^16.0.0 || ^17.0.0 || ^18.0.0",
+    "react-dom": "^16.0.0 || ^17.0.0 || ^18.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.7",
+    "@babel/plugin-transform-runtime": "^7.21.0",
+    "@babel/preset-env": "^7.16.8",
+    "@babel/preset-react": "^7.16.7",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-node-resolve": "^13.1.3",
+    "rollup": "^2.68.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.34.1",
+    "typescript": "^4.5.5"
+  }
+}
