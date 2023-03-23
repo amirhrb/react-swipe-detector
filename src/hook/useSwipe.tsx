@@ -10,12 +10,17 @@ const threshold = 130;
 const allowedTime = 250;
 
 interface States {
-  0: string | null;
-  1: string | null;
+  directions: [
+    { primaryDir: string | null; primaryDist: number | null },
+    { secondaryDir: string | null; secondaryDist: number | null }
+  ];
 }
 
 const useSwipe = (elRef: React.RefObject<HTMLDivElement>) => {
-  const [directions, setDirections] = useState<States>(() => [null, null]);
+  const [directions, setDirections] = useState<States>(() => [
+    { primaryDir: null, primaryDist: null },
+    { secondaryDir: null, secondaryDist: null },
+  ]);
   const touchStartHandler = (e: TouchEvent) => {
     const touchObj = e.changedTouches[0];
     startX = touchObj.pageX;
@@ -37,10 +42,16 @@ const useSwipe = (elRef: React.RefObject<HTMLDivElement>) => {
     const swipeTypeCheck = () => {
       if (elapsedTime > allowedTime) return false;
       if (Math.abs(distY) > threshold && !(Math.abs(distX) >= 100)) {
-        setDirections(() => [verticalDirection, horizontalDirection]);
+        setDirections(() => [
+          { primaryDir: verticalDirection, primaryDist: Math.abs(distY) },
+          { secondaryDir: horizontalDirection, secondaryDist: Math.abs(distX) },
+        ]);
       }
       if (Math.abs(distX) > threshold && !(Math.abs(distY) >= 100)) {
-        setDirections(() => [horizontalDirection, verticalDirection]);
+        setDirections(() => [
+          { primaryDir: horizontalDirection, primaryDist: Math.abs(distX) },
+          { secondaryDir: verticalDirection, secondaryDist: Math.abs(distY) },
+        ]);
       }
       return false;
     };

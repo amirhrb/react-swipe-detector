@@ -1,7 +1,7 @@
 {
-  "name": "@amirhrb/swipe-detector",
+  "name": "@amirhrb/react-swipe-detector",
   "version": "1.0.0",
-  "description": "swipe-detector is a React library to detect Touch Swipes and Directions.",
+  "description": "react-swipe-detector is a React library to detect Touch Swipes and Directions.",
   "license": "Apache-2.0",
   "private": false,
   "author": "amirrabi70@gmail.com",
@@ -16,16 +16,16 @@
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/swipe-detector"
+    "registry": "https://npm.pkg.github.com/react-swipe-detector"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/amirhrb/swipe-detector.git"
+    "url": "git+https://github.com/amirhrb/react-swipe-detector.git"
   },
   "bugs": {
-    "url": "https://github.com/amirhrb/swipe-detector/issues"
+    "url": "https://github.com/amirhrb/react-swipe-detector/issues"
   },
-  "homepage": "https://github.com/amirhrb/swipe-detector#readme",
+  "homepage": "https://github.com/amirhrb/react-swipe-detector#readme",
   "files": [
     "dist"
   ],
