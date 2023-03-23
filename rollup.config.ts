@@ -39,6 +39,5 @@ export default {
     }),
     terser(),
   ],
-  // If you are using React version 17 or higher, make sure to add the following line to avoid warnings.
   external: Object.keys(pkg.peerDependencies || {}),
 };
